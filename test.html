@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horizontal Scroll</title>
+    <link rel="stylesheet" href="css/grid.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            display: grid;
+            background: darkblue;
+            place-items: center;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 
+            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+             'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        .modal{
+            position: fixed;
+            width: 200px;
+            height: 200px;
+            display: none;
+            padding-top: 80px;
+            background: rgba(0,0,0,0.8);
+            color: #fff;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 10px;
+            
+        }
+        .modal-btn {
+            position: absolute;
+             width: 25px;
+            height: 17px; 
+            right: 5px;
+            background: black;
+            padding: 5px 20px;
+            border-radius: 7px;
+            cursor: pointer;
+            color: #fff;
+            /* height: 20px;
+            width: 20px; */
+        }
+        #modal-toggle {
+            appearance: none;
+        }
+        #modal-toggle:checked+.modal-btn+.modal {
+            display: block;
+        }
+        .triangle{
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid blue;
+        }
+        .heading{
+            text-transform: capitalize;
+            color: white;
+            letter-spacing: 10px;
+            text-shadow:    0 0 10px cyan,
+                            0 0 10px cyan,
+                            0 0 10px cyan,
+                            0 0 10px  cyan;
+        }                   
+        .scroll-container {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            scrollbar-width: none;
+        }
+        .scroll-container::-webkit-scrollbar{
+            display: none;
+        }
+
+        .scroll-item {
+            min-width: 100px; /* adjust as needed */
+            height: 200px;
+            background-color: lightblue;
+            margin: 10px;
+            text-align: center;
+            line-height: 200px; /* centers text vertically */
+            box-shadow: 10px 4px 8px rgba(0,0,0,0.2);
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+        }
+        /* .right{
+            margin-left: 500px;
+            padding: 10px;
+        } */
+    </style>
+</head>
+<body>
+
+    <div class="right">
+        <input type="checkbox" id="modal-toggle">
+        <label for="modal-toggle" class="modal-btn"> <div class="mobile_menu_icon">
+            <p class="top_line"></p>
+            <p class="middle_line"></p>
+            <p class="bottom_line"></p>
+          </div></label>
+        <div class="modal">
+            <p>Modal content</p>
+        </div>
+
+    <p class="heading">What we're selling</p>
+</div>
+    <div class="scroll-container">
+        <div class="scroll-item">Item 1</div>
+        <div class="scroll-item">Item 2</div>
+        <div class="scroll-item">Item 3</div>
+        <div class="scroll-item">Item 4</div>
+        <div class="scroll-item">Item 5</div>
+    </div>
+
+    <h1 style="display: block;">Amazonas</h1>
+    
+   <ol>
+     <li>1</li>
+     <li>1</li>
+     <li>1</li>
+     <li>1</li>
+     <li>1</li>
+     <li>1</li>
+     <li>1</li>
+     <li>1</li>
+    </ol>
+
+    <input type="number" id="number">
+    <input type="range" id="rangeSlider">
+    <div class="triangle"hhhhhhh</div>
+
+   
+
+    <script>
+        const number = document.getElementById('number');
+        const heading = document.querySelector('.heading');
+        const rangeSlider =document.getElementById('rangeSlider');
+
+        heading.style.fontSize = number.value + 'px'
+        heading.style.fontSize = rangeSlider.value + 'px'
+
+        number.addEventListener('input', ()=> {
+            heading.style.fontSize = number.value + 'px'
+        }
+        )
+        rangeSlider.addEventListener('input', ()=> {
+            heading.style.fontSize = rangeSlider.value + 'px'
+        }
+        )
+    </script>
+</body>
+</html>

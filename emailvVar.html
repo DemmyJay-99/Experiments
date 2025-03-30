@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="javaScript/emailVer.js"></script>
+</head>
+<body>
+    <input type="email" id="email" placeholder="Enter email">
+<span id="email-error"></span>
+</body>
+</html>
+
+
+
+<!-- *Explanation:*
+
+1. `type="email"`: HTML5 email input type, which provides basic validation.
+2. `addEventListener('input')`: Listens for input events on the email field.
+3. `emailRegex`: Regular expression pattern to validate email addresses.
+4. `test()` method: Checks if the input value matches the regex pattern.
+5. `emailError`: Displays error message if email is invalid.
+
+*Regex Pattern Explanation:*
+
+`^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$`
+
+- `^` asserts start of string.
+- `[a-zA-Z0-9._%+-]+` matches local part (before `@`).
+- `@` matches `@` symbol.
+- `[a-zA-Z0-9.-]+` matches domain name.
+- `\.` matches dot (.) before top-level domain.
+- `[a-zA-Z]{2,}` matches top-level domain (at least 2 characters).
+- `$` asserts end of string.
+
+*Additional Validation:*
+
+For more advanced validation, consider using JavaScript libraries like:
+
+- jQuery Validation Plugin
+- Validate.js
+- EmailJS
+
+*Browser Support:*
+
+This code works in modern browsers, including:
+
+- Google Chrome
+- Mozilla Firefox
+- Safari
+- Microsoft Edge
+
+Would you like more information on email validation or JavaScript regular expressions? -->

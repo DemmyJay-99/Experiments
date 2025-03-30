@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Shantell Sans', cursive;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+
+html,
+body {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #2c3e50;
+}
+
+.wrapper {
+  position: absolute;
+  width: 350px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 11px;
+  box-shadow: 5px 20px 30px rgba(0, 0, 0, 0.15);
+}
+
+.profile {
+  width: 150px;
+  height: 150px;
+  border: 2px solid #fff;
+  overflow: hidden;
+  padding: 10px 20px;
+  border-radius: 50%;
+  margin: 10px auto;
+}
+
+.profile img {
+  width: 90%;
+}
+
+.wrapper .input-box {
+  position: relative;
+  height: 50px;
+  background-color: #34495e;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+.input-box input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  padding: 20px;
+  color: #fff;
+  background: #34495e;
+  border: 2px solid #34495e;
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+input:is(:focus, :valid) {
+  border-color: #34495e;
+}
+
+.input-box :is(label, i) {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #bdc3c7;
+  transition: all 0.2s ease;
+}
+
+input:is(:focus, :valid)~label {
+  color: #bdc3c7;
+  top: 0;
+  font-size: 12px;
+  font-weight: 500;
+  background: #34495e;
+}
+
+.input-box label {
+  left: 15px;
+  pointer-events: none;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.input-box i {
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+input:is(:focus, :valid)~i {
+  color: #bdc3c7;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+input[type="button"] {
+  border: 0;
+  outline: 0;
+  padding: 15px 125px;
+  background: #6E2EFF;
+  color: #fff;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+input[type="button"]:hover {
+  background: #6E27D4;
+}

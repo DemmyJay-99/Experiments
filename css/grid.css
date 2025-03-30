@@ -1,0 +1,12 @@
+ol {
+    all: unset;
+    display: grid;
+    grid-template-columns: 34, 1fr;
+    grid-template-rows: repeat(21, 1fr);
+    list-style: none;
+}
+li {
+    aspect-ratio: 1 / 1;
+    background: var(--bg);
+    grid-area: var(--ga);
+}

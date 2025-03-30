@@ -1,0 +1,110 @@
+body{
+    max-width: 1600px;
+    min-width: 350px;
+}
+.main_section{
+    background: linear-gradient(99deg, #fcfcfc, #e4e4e4, #000b1c 80%); 
+    display: flex;
+    align-content: space-around;
+    justify-content: center; 
+}
+.main_section h2{
+    margin-top: 1.0em;
+    font-size: 3.8em;
+     color: #022353; 
+    font-weight: 600;
+}
+.main_section h3{
+font-size: 2.4em;
+color: #022353;
+font-weight: 200;
+}
+.main_section h4{
+    margin-top: .2em; 
+    font-size: 2.3em;
+     color: #020928; 
+    font-weight: 100;
+}
+.main_section button{
+    margin-top: 1.7em;
+    display: block;
+    border: none;
+    font-size: 20px;
+    padding: .9em 4em .9em 4em;
+    border-radius: 50px;
+    background: linear-gradient(45deg, #0F0167, #4D85FD); /*change here */
+    /* font-weight: 700; */
+    color: #fff;
+}
+.main_section button:hover{
+    cursor: pointer;
+    background: linear-gradient(90deg,#4D85FD, #0F0160);
+}
+
+@media (max-width:999px) { 
+.main_section img{
+    width: 45%;
+}
+.main_section h2{
+    margin-top: 1.0em;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+.main_section h3{
+font-size: 1.9em;
+font-weight: 500;
+}
+.main_section h4{
+    margin-top: .2em; 
+    font-size: 1.5em;
+    font-weight: 400;
+}
+.main_section button{
+    font-size: 18px;
+    padding: .6em 2em .6em 2em;    
+}
+}
+
+@media (max-width:680px) {
+    .main_section{
+        display: block;
+        margin: auto;
+        background: url("../images/lady.png"),
+        linear-gradient(90deg, #a6a6b2, #000 60%);
+         background-size: contain;
+         background-repeat: no-repeat;
+         background-position: center;
+    }
+
+    .main_section2{
+        background: url("../images/ayo.png"),
+        linear-gradient(90deg, #a6a6b2, #000 60%);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+    .main_section div{
+     text-align: center;    
+    }
+    .main_section h2{
+        font-weight: 600;
+        color: #e1e7ff;
+    }    
+    .main_section h3{
+        font-weight: 500;
+        color: #fcfcfc;
+    }    
+    .main_section h4{
+        font-weight: 400;
+        color: #fcfcfc;
+    }
+    
+    .main_section button{
+     margin: auto;
+     margin-top: .9em;
+     margin-bottom: 1em;
+    }
+    .main_section img{
+     display: none;
+    }
+    }

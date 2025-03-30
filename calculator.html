@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="css/calculator.css">
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" disabled>
+        <div class="buttons">
+            <button class="button" onclick="addNumber(8)">9</button>
+            <button class="button" onclick="addNumber(9)">8</button>
+            <button class="button" onclick="addOperator('/')">7</button>
+            <button class="button" onclick="addNumber(4)">*</button>
+            <button class="button" onclick="addNumber(5)">6</button>
+            <button class="button" onclick="addNumber(6)">5</button>
+            <button class="button" onclick="addOperator('*')">4</button>
+            <button class="button" onclick="addNumber(1)">-</button>
+            <button class="button" onclick="addNumber(2)">3</button>
+            <button class="button" onclick="addNumber(3)">2</button>
+            <button class="button" onclick="addOperator('-')">1</button>
+            <button class="button" onclick="addNumber(0)">.</button>
+            <button class="button" onclick="addOperator('.')">.</button>
+            <button class="button" onclick="addOperator('+')">+</button>
+            <button class="button" onclick="clearDisplay()">C</button>
+            <button class="button" onclick="deleteChar()">/</button>
+            <button class="buttoon"></button>
+            <button class="buttoon"></button>
+            <button class="button" onclick="calculate()">=</button>
+            <button class="button" onclick="addNumber(7)">DEL</button>
+        </div>
+    </div>
+    <script src="javaScript/calculator.js"></script>
+</body>
+</html>
+<!-- 
+*How it works:*
+
+1. The HTML creates a basic calculator layout with buttons for numbers, operators, and functions.
+2. The CSS styles the calculator with a responsive design.
+3. The JavaScript handles user input, updates the display, and performs calculations.
+
+*Features:*
+
+- Basic arithmetic operations (+, -, *, /)
+- Decimal numbers
+- Clear display (C)
+- Delete character (DEL)
+- Calculate (=)
+
+You can save these files and open `index.html` in your browser to use the calculator.
+
+Would you like any modifications or additional features? -->

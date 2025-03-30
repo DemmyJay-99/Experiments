@@ -1,0 +1,43 @@
+
+   <!DOCTYPE html>
+   <html lang="en">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Cursor Follow</title>
+     <style>
+       .follower {
+         position: absolute;
+         width: 20px;
+         height: 20px;
+         background-color: red;
+         border-radius: 50%;
+         pointer-events: none; /* Ensure the element doesn't block other interactions */
+       }
+       .disciples{
+         position: absolute;
+         width: 20px;
+         height: 20px;
+         background-color: red;
+         border-radius: 50%;
+         pointer-events: none; /* Ensure the element doesn't block other interactions */
+       }
+     </style>
+   </head>
+   <body>
+    <div ondblclick="drag">
+     <div class="follower" id="follower"><h1>t</h1></div>
+     <div class="disciples" id="disciples"><h1>a</h1></div>
+    </div>
+    <h1 contenteditable="true">Yo</h1>
+     <script src="javaScript/experiments.js"></script>
+   </body>
+   </html>
+
+<!-- **Explanation:**
+
+- **HTML**: The `.follower` element will follow the cursor. It is given an `id` for easy access in JavaScript.
+- **CSS**: The `.follower` class is styled to be a small, red, circular element. `position: absolute` allows you to position it precisely based on cursor coordinates.
+- **JavaScript**: The `mousemove` event listener updates the position of the `.follower` element to match the cursor's position.
+
+You can further enhance this basic example by adding animations, changing sizes, or having multiple elements follow the cursor for a more dynamic effect. -->

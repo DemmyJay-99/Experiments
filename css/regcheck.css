@@ -1,0 +1,5 @@
+div{
+    border: 4px solid;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+}

@@ -1,0 +1,46 @@
+You're looking to create a registration page with input fields that pop up and change the background color when clicked. Here's an example using HTML, CSS, and JavaScript:
+
+HTML:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="css/registrationtest.css">
+</head>
+<body>
+    <div class="container">
+        <form>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" onfocus="focusInput(this)" onblur="blurInput(this)">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" onfocus="focusInput(this)" onblur="blurInput(this)">
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" onfocus="focusInput(this)" onblur="blurInput(this)">
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script src="javaScript/registrationtest.js"></script>
+</body>
+</html>
+
+
+<!-- 
+This code creates a registration page with input fields that:
+
+1. Change border color and box shadow on focus.
+2. Scale up and change background color on focus.
+3. Change background color of the page on focus.
+
+You can adjust the styles and effects to your liking.
+
+Would you like any modifications or additional effects? -->

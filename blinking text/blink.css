@@ -1,0 +1,30 @@
+.blink{
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 52px;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 2px;
+    animation: blink 1s steps(100,start) infinite;
+    margin: 60px;
+}
+@keyframes blink{
+    50%{
+        opacity: 0;
+        font-size: 35px;
+        color: yellow;
+        border: 2px solid;
+    }
+}
+body{
+    background-color: rgb(24, 4, 33);
+}
+.circle{
+    margin: 50px;
+    border: 2px double ;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    color: black;
+    background-color: #fff;
+}

@@ -1,0 +1,39 @@
+Here's an example of how you can implement a modal box for password input on a registration page using HTML, CSS, and JavaScript:
+
+HTML:
+
+```
+<!-- Registration Form -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/modal.css">
+
+ </head>
+ <body>
+<form>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username"><br><br>
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email"><br><br>
+    <label for="password">Password</label>
+    <input type="text" id="password-input" readonly>
+    <button onclick="openPasswordModal()">Enter Password</button><br><br>
+    <button type="submit">Register</button>
+</form>
+
+<!-- Modal for Password Input -->
+<div id="password-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Enter Password</h2>
+        <input type="password" id="password" name="password">
+        <button onclick="savePassword()">Save</button>
+    </div>
+</div>
+    <script src="javaScript/modal.js"></script>
+</body>
+</html>
